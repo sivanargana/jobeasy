@@ -1,8 +1,11 @@
 import express from 'express';
+import path from 'path';
+const viewsPath = new URL('./views', import.meta.url).pathname;
 
 const app = express();
 const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
+app.set('views', viewsPath); 
 app.get('/', (req, res) => {
   res.render('index');
 });
