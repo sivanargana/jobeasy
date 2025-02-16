@@ -8,11 +8,18 @@ const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.set('views', viewsPath); 
 app.get('/', async (req, res) => {
-//   const browser = await puppeteer.launch();
-// const page = await browser.newPage();
+
+  try {
+  const browser = await puppeteer.launch();
+const page = await browser.newPage();
 
 
-// await page.goto('https://developer.chrome.com/');
+await page.goto('https://developer.chrome.com/');
+
+} catch (error) {
+  console.error(error);
+  res.status(500).send('Something went wrong');
+}
   res.render('index');
 });
 
