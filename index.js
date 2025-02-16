@@ -16,6 +16,10 @@ const page = await browser.newPage();
 
 await page.goto('https://developer.chrome.com/');
 
+await browser.close();
+
+
+
 } catch (error) {
   
   res.json(error)
