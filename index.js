@@ -17,8 +17,8 @@ const page = await browser.newPage();
 await page.goto('https://developer.chrome.com/');
 
 } catch (error) {
-  console.error(error);
-  res.status(500).send('Something went wrong');
+  
+  res.json(error)
 }
   res.render('index');
 });
