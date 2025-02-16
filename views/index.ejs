@@ -1,0 +1,55 @@
+
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+<div class="
+bg-[#f8f9fa]
+grid
+grid-cols-2
+items-start
+gap-[30px]
+p-[30px]
+[&_ul]:grid
+[&_ul]:grid-cols-2
+[&_ul]:gap-[16px] 
+[&_ul>li>a]:flex
+[&_ul>li>a]:h-full
+[&_ul>li>a]:flex-col
+[&_ul>li>a]:bg-white
+[&_ul>li>a]:p-[20px]
+[&_ul>li>a]:rounded-[10px]
+[&_ul>li>a]:border
+[&_ul>li>a]:border-[#e7e7f1]
+[&_ul>li>a:hover]:bg-sky-100
+    ">
+
+    <div>
+        <h1 class="text-3xl mb-[20px]">Naukri</h1>
+        <ul>
+            <% naukri.forEach(function(item){ %>
+               <li> 
+                <a href="<%= item.link %>" target="_blank">
+                    <strong><%= item.title %></strong>
+                <small><%= item.company %> | <%= item.exp %></small>
+                </a>
+               </li>
+            <% }); %>
+          </ul>
+    </div>
+    
+    <div>
+        <h1 class="text-3xl mb-[20px]">Linkedin</h1>
+        <ul>
+            <% linkedin.forEach(function(item){ %>
+                <li> 
+                    <a href="<%= item.link %>" target="_blank">
+                        <strong><%= item.title %></strong>
+                        <small><%= item.company %> | <%= item.exp %></small>
+                    </a>
+    
+                   </li>
+            <% }); %>
+          </ul>
+    </div>
+</div>
+
+  
