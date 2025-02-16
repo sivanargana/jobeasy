@@ -14,7 +14,7 @@ app.get('/', async (req, res) => {
 const page = await browser.newPage();
 
 
-await page.goto('https://developer.chrome.com/');
+await page.goto('https://www.example.com/');
 
 await browser.close();
 
